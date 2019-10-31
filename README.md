@@ -1,2 +1,2 @@
 # 00100000spacebar.github.io
-Just a website with no purpose... yet
+The official website of Codecoin, a CPOS currency!
