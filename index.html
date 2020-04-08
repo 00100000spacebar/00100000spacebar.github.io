@@ -8,8 +8,51 @@
     <noscript>enable javascript nerd</noscript>
     <script src="app.js"></script>
     <h1>What the heck is this website?</h1>
-    <p>This is a test website I made just for messing around with JS and CSS. There's no reason to visit or use this website.
-    Thanks for checking it out anyways. If you'd like to see an actual project, go to PolyCalc2.github.io for a competitive
-    Polytopia damage calculator when I finish it. Bye!</p>
+      <p>
+      import java.util.Arrays;
+
+      public class Main {
+          public static void main (String[]args) {
+              //
+              // TEST CASES DO NOT ALTER
+              //
+              int[] arr = {1, 2, 4, 5, 7, 9, 10, 11, 13};
+              System.out.println(Arrays.toString(allConsecutive(arr)));
+              // EXPECTED OUTPUT: 4, 7, 9, 13
+              int[] arr2 = {4, 5, 6, 7, 9, 13};
+              System.out.println(Arrays.toString(allConsecutive(arr2)));
+              // EXPECTED OUTPUT: 9, 13
+              System.out.println(hasMidpoint(4, 5, 6));
+              // EXPECTED OUTPUT: true
+              System.out.println(hasMidpoint(6, 7, 12));
+              // EXPECTED OUTPUT: false
+          }
+          public static int[] allConsecutive(int[] n) {
+              int[] ret = new int[n.length];
+              // if all the numbers aren't consecutive, the array must be the length of all the numbers given
+              int count = 0;
+              // this integer keeps track of all the times we loop through the array!
+              for (int i = 0; i < n.length - 1; i++) {
+              // loop through all the numbers
+                  if(n[i + 1] - n[i] != 1) {
+                      ret[count] = n[i + 1];
+                      count++;
+                      // count++ makes space for future non-consecutive numbers. This is very important so we don't
+                      // overlap array positions!
+                  }
+              }
+              return ret;
+          }
+          public static boolean hasMidpoint(int x, int y, int z) {
+              // we can represent (x + y) / 2 == z as x + y == 2 * z
+              // this solution is foolproof for things like 3, 4, 6 where without
+              // converting to double, 
+              if (x + y == 2 * z) return true;
+              if (x + z == 2 * y) return true;
+              if (y + z == 2 * x) return true;
+              return false;
+          }
+      }
+      </p>
   </body>
 </html>
