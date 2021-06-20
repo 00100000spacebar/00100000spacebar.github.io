@@ -1,2 +1,2 @@
 # 00100000spacebar.github.io
-I don't know what I want to do with this website lol
+It's been a while since I've touched this repository. I'll likely just make this a personal website with React.js later.
